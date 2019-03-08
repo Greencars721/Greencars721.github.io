@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<head>
+<script src="/assets/jquery.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #232323;
+}
+div {
+  height: 250px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Londrina Shadow', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: #aaaaaa;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: #bbbbbb;
+  margin: 0px 0 70px 0;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+
+.price {
+  float: right;
+}
+    ul {
+      padding: 10px;
+      background: rgba(0,0,0,0.5);
+      text-align: center;
+    }
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+@media (max-width: 500px) {
+  h1 {
+    font-size:50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+
+    <ul>
+      <li><button onclick=Manga()>Manga</button></li>
+      <li><button onclick=Superhero()>Superhero</button></li>
+      <li><button onclick=Superpowers()>Superpowers </button></li>
+    </ul>
+   
+
+<h1>Spectacular Manga/Comics</h1>
+<h2>Fighting Entertainment</h2>
+
+<div id="dshdsht"> </div>
+
+<script>
+MangaImages = [
+'url("https://s.newsweek.com/sites/www.newsweek.com/files/styles/full/public/2019/01/23/dragon-ball-super-anime-art.JPG")',
+'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0HAaRTXw2bZpN2uH7O6YiXWe7hMi3Salv09bJMhhEBoSu1-NN")',
+'url("https://ae01.alicdn.com/kf/HTB1U.oQdNWYBuNjy1zkq6xGGpXaj/anime-powerful-Dragon-Ball-Super-DBS-japonese-manga-asian-Living-room-home-wall-art-decor-wood.jpg_640x640.jpg")',
+]
+
+SuperheroImages = [
+'url("https://store-images.s-microsoft.com/image/apps.31741.13630064161160212.bc7e8e31-a6de-478a-a9d5-0f1fea11be17.9436c5a9-9747-4f82-8e70-ad409831fc19?mode=scale&q=90&h=300&w=300")',
+'url("http://media2.s-nbcnews.com/j/MSNBC/Components/Photo/_new/100506-ironman2-hmed.grid-6x2.jpg")',
+'url("http://www.fhfff.com/img56/jyvlhvljaxcccksigmzr.jpg")',
+]
+
+SuperpowersImages = [
+'url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/36e6d2e7-9bca-4445-b9c3-9c36b484bea8/d6akocr-e6b87f61-71c3-4d76-b036-78fff14c6baf.png")',
+'url("https://lh3.ggpht.com/cOD2Qe6TM6PDO7ZTXYpMsBMxleqjrjHXAra3YF5vy5UoErgrYThrExe6Ko1-VYysFx4=h300")',
+'url("https://vignette.wikia.nocookie.net/naruto/images/5/52/Mangeky%C5%8D_Sharingan_Itachi.svg/revision/latest/scale-to-width-down/200?cb=20110803151309")',
+]
+
+
+function Manga() {
+  Itachi= document.getElementById("dshdsht")
+  Itachi.innerHTML = ""
+	Itachi.innerHTML += MangaDivs[0]
+  Itachi.innerHTML += MangaDivs[1]
+  Itachi.innerHTML += MangaDivs[2]
+	//alert("hgchvjv")	
+	items = document.getElementsByClassName("item")
+    items[0].style.background = MangaImages[0]
+    items[0].style.backgroundSize = '100% 100%'
+    items[1].style.background = MangaImages[1]
+    items[2].style.background = MangaImages[2]
+}
+function Superhero() {
+  Sasuke= document.getElementById("dshdsht")
+  Sasuke.innerHTML = ""
+	Sasuke.innerHTML += SuperheroDivs[0]
+  Sasuke.innerHTML += SuperheroDivs[1]
+  Sasuke.innerHTML += SuperheroDivs[2]
+	//alert("fewklfu")    
+		items = document.getElementsByClassName("item")
+    items[0].style.background = SuperheroImages[0]
+    items[1].style.background = SuperheroImages[1]
+    items[2].style.background = SuperheroImages[2]
+    items[2].style.backgroundSize = '100% 100%'
+}
+function Superpowers() {
+   Naruto= document.getElementById("dshdsht")
+  Naruto.innerHTML = ""
+  Naruto.innerHTML += SuperpowersDivs[0]
+  Naruto.innerHTML += SuperpowersDivs[1]
+  Naruto.innerHTML += SuperpowersDivs[2]
+	//alert("ehkfwfw")    
+		items = document.getElementsByClassName("item")
+    items[0].style.background = SuperpowersImages[0]
+    items[2].style.backgroundSize = '100% 100%'
+    items[1].style.background = SuperpowersImages[1]
+    items[2].style.background = SuperpowersImages[2]
+}
+MangaDivs = [
+'<div class="item"><p> We are Goku and Vegeta and we are two of the strongest saiyans alive.. <span class="price">$100</span><br /><small> Vegeta and Goku fuse because they have the right amount power and become one named Vegito. </small></p>','<div class="item"><p I am Goku Super Saiyan Blue. <span class="price">$100</span><br /> <small>Goku trained hard for this task and he is stronger Vegeta.</small></p></div>','<div class="item"><p> I am Goku and I unlocked Ultra Instincts and I amstronger than ever. <span class="price">$100</span><br /><small> Goku achieved his goal of becoming almost the strongest in the universe. </small></p></div>',
+ ]
+SuperheroDivs = [
+'<div class="item"><p> I am Black Panther I will proctect my city Wakanda my place. <span class="price">$100</span><br /><small> Black Panther is what I am and I will always protect my city. </small></p>','<div class="item"><p> I am Iron Man and I will protect New York and destroy my enemies/villains.<span class="price">$100</span><br /> <small>Iron Man is so powerful he can almost do anything.</small></p></div>','<div class="item"><p> I am Thanos the villian and I will destroy the galaxy.<span class="price">$100</span><br /><small> Thanos is very dangerous and will destroy the Avengers. </small></p></div>',
+	]
+SuperpowersDivs = [
+'<div class="item"><p> This superpower is the chidori and I am used my the Uchiha Clan. <span class="price">$100</span><br /><small> I am used by only the strongest Uchiha in the Clan. </small></p>','<div class="item"><p> <span class="price">$100</span><br /> I am the Rasengan and I am used by only the strongest who can master it. <small> The Rasengan is one the most powerful superpowers in the world.</small></p></div>','<div class="item"><p> The Mangekeyou Sharingan is one of the best superpowers that anybody has ever used and its undefeatable superpower.<span class="price">$100</span><br /><small>The Mangkeyou Sharingan is not so bad it really good superpower. </small></p></div>',
+	]
+
+
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
