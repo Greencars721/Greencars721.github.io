@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="/assets/jquery.js"></script>
+
 <link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
 <style>
 body {
@@ -104,6 +103,7 @@ small {
       <li><button onclick=Manga()>Manga</button></li>
       <li><button onclick=Superhero()>Superhero</button></li>
       <li><button onclick=Superpowers()>Superpowers </button></li>
+	  <li><button onclick=Instincts()>Instincts</button></li>
     </ul>
    
 
@@ -123,19 +123,27 @@ SuperheroImages = [
 'url("https://store-images.s-microsoft.com/image/apps.31741.13630064161160212.bc7e8e31-a6de-478a-a9d5-0f1fea11be17.9436c5a9-9747-4f82-8e70-ad409831fc19?mode=scale&q=90&h=300&w=300")',
 'url("http://media2.s-nbcnews.com/j/MSNBC/Components/Photo/_new/100506-ironman2-hmed.grid-6x2.jpg")',
 'url("http://www.fhfff.com/img56/jyvlhvljaxcccksigmzr.jpg")',
+'url("https://www.picclickimg.com/d/l400/pict/392216588104_/BRUCE-TIMM-rare-BATMAN-BEYOND-Rebirth-Part-2.jpg")',
 ]
 
 SuperpowersImages = [
 'url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/36e6d2e7-9bca-4445-b9c3-9c36b484bea8/d6akocr-e6b87f61-71c3-4d76-b036-78fff14c6baf.png")',
 'url("https://lh3.ggpht.com/cOD2Qe6TM6PDO7ZTXYpMsBMxleqjrjHXAra3YF5vy5UoErgrYThrExe6Ko1-VYysFx4=h300")',
 'url("https://vignette.wikia.nocookie.net/naruto/images/5/52/Mangeky%C5%8D_Sharingan_Itachi.svg/revision/latest/scale-to-width-down/200?cb=20110803151309")',
+'url("https://media.giphy.com/media/WN16kBTKVAEuI/giphy.gif")',
+'url("https://cdn.player.one/sites/player.one/files/styles/lg/public/2016/04/04/ssgssgoku-dragon-ball.jpg")'
 ]
 
+InstinctsImages = [
+	'url("https://i.pinimg.com/originals/f8/c0/b9/f8c0b95cf76bc6261fa58aafb4bf6162.jpg")',
+	'url("https://cdn.psychologytoday.com/sites/default/files/styles/article-inline-half/public/blogs/30123/2012/02/87487-83411.jpg?itok=YdnucbEs")',
+	'url("http://www.kiplinger.com/quiz/investing/T023-S001-test-your-investing-instincts/images/think-you-re-a-smart-investor-how-you-invest-and-h1.jpg")',
+	]
 
 function Manga() {
   Itachi= document.getElementById("dshdsht")
   Itachi.innerHTML = ""
-	Itachi.innerHTML += MangaDivs[0]
+  Itachi.innerHTML += MangaDivs[0]
   Itachi.innerHTML += MangaDivs[1]
   Itachi.innerHTML += MangaDivs[2]
 	//alert("hgchvjv")	
@@ -148,45 +156,73 @@ function Manga() {
 function Superhero() {
   Sasuke= document.getElementById("dshdsht")
   Sasuke.innerHTML = ""
-	Sasuke.innerHTML += SuperheroDivs[0]
+  Sasuke.innerHTML += SuperheroDivs[0]
   Sasuke.innerHTML += SuperheroDivs[1]
   Sasuke.innerHTML += SuperheroDivs[2]
+	Sasuke.innerHTML+=SuperheroDivs[3]
 	//alert("fewklfu")    
 		items = document.getElementsByClassName("item")
     items[0].style.background = SuperheroImages[0]
     items[1].style.background = SuperheroImages[1]
     items[2].style.background = SuperheroImages[2]
     items[2].style.backgroundSize = '100% 100%'
+	items[3].style.background = SuperheroImages[3]
 }
 function Superpowers() {
-   Naruto= document.getElementById("dshdsht")
+  Naruto= document.getElementById("dshdsht")
   Naruto.innerHTML = ""
   Naruto.innerHTML += SuperpowersDivs[0]
   Naruto.innerHTML += SuperpowersDivs[1]
   Naruto.innerHTML += SuperpowersDivs[2]
+  Naruto.innerHTML += SuperpowersDivs[3]
+  Naruto.innerHTML += SuperpowersDivs[4]
 	//alert("ehkfwfw")    
 		items = document.getElementsByClassName("item")
     items[0].style.background = SuperpowersImages[0]
     items[2].style.backgroundSize = '100% 100%'
     items[1].style.background = SuperpowersImages[1]
     items[2].style.background = SuperpowersImages[2]
+	items[3].style.background = SuperpowersImages[3]
+	items[4].style.background = SuperpowersImages[4]
 }
+
+function Instincts() {
+  Boruto= document.getElementById("dshdsht")
+  Boruto.innerHTML = ""
+  Boruto.innerHTML += InstinctsDivs[0]
+  Boruto.innerHTML += InstinctsDivs[1]
+  Boruto.innerHTML += InstinctsDivs[2]
+	//alert("vebykve")
+		items = document.getElementsByClassName("item")
+    items[0].style.background = InstinctsImages[0]
+    items[0].style.backgroundSize = '100% 100%'
+    items[1].style.background = InstinctsImages[1]
+    items[2].style.background = InstinctsImages[2]
+}
+	
 MangaDivs = [
-'<div class="item" onclick=this.classList.toggle("show-description")><p> We are Goku and Vegeta and we are two of the strongest saiyans alive.. <span class="price">$100</span><br /><small> Vegeta and Goku fuse because they have the right amount power and become one named Vegito. </small></p></div>',
-'<div class="item" onclick=this.classList.toggle("show-description")><p> I am Goku Super Saiyan Blue. <span class="price">$100</span><br /> <small>Goku trained hard for this task and he is stronger Vegeta.</small></p></div>',
-'<div class="item" onclick=this.classList.toggle("show-description")><p> I am Goku and I unlocked Ultra Instincts and I amstronger than ever. <span class="price">$100</span><br /><small> Goku achieved his goal of becoming almost the strongest in the universe. </small></p></div>',
+'<div class="item" onclick=this.classList.toggle("show-description")><p> We are Goku and Vegeta and we are two of the strongest saiyans alive.<span class="price">$100</span><br /><small> Vegeta and Goku fuse because they have the right amount power and become one named Vegito. </small></p>',
+	'<div class="item"onclick=this.classList.toggle("show-description")><p I am Goku Super Saiyan Blue. <span class="price">$100</span><br /> <small>Goku trained hard for this task and he is stronger Vegeta.</small></p></div>',
+	'<div class="item"onclick=this.classList.toggle("show-description")><p> I am Goku and I unlocked Ultra Instincts and I amstronger than ever. <span class="price">$100</span><br /><small> Goku achieved his goal of becoming almost the strongest in the universe. </small></p></div>',
  ]
 SuperheroDivs = [
-'<div class="item" onclick=this.classList.toggle("show-description")><p> I am Black Panther I will proctect my city Wakanda my place. <span class="price">$100</span><br /><small> Black Panther is what I am and I will always protect my city. </small></p></div>',
-	'<div class="item" onclick=this.classList.toggle("show-description")><p> I am Iron Man and I will protect New York and destroy my enemies/villains.<span class="price">$100</span><br /> <small>Iron Man is so powerful he can almost do anything.</small></p></div>',
-	'<div class="item" onclick=this.classList.toggle("show-description")><p> I am Thanos the villian and I will destroy the galaxy.<span class="price">$100</span><br /><small> Thanos is very dangerous and will destroy the Avengers. </small></p></div>',
+	'<div class="item"onclick=this.classList.toggle("show-description")><p> I am Black Panther I will proctect my city Wakanda my place. <span class="price">$100</span><br /><small> Black Panther is what I am and I will always protect my city. </small></p>',
+	'<div class="item"onclick=this.classList.toggle("show-description")><p> I am Iron Man and I will protect New York and destroy my enemies/villains.<span class="price">$100</span><br /> <small>Iron Man is so powerful he can almost do anything.</small></p></div>',
+	'<div class="item"onclick=this.classList.toggle("show-description")><p> I am Thanos the villian and I will destroy the galaxy.<span class="price">$100</span><br /><small> Thanos is very dangerous and will destroy the Avengers. </small></p></div>',
+	'<div class="item"onclick=this.classList.toggle("show-description")><p> I am Batman Beyond and I am batmans son.<span class="price">$100</span><br /><small> I love fighting crime and I will protect who I love. </small></p></div>',
 	]
 SuperpowersDivs = [
-'<div class="item" onclick=this.classList.toggle("show-description")><p> This superpower is the chidori and I am used my the Uchiha Clan. <span class="price">$100</span><br /><small> I am used by only the strongest Uchiha in the Clan. </small></p></div>',
-	'<div class="item" onclick=this.classList.toggle("show-description")><p> <span class="price">$100</span><br /> I am the Rasengan and I am used by only the strongest who can master it. <small> The Rasengan is one the most powerful superpowers in the world.</small></p></div>',
-	'<div class="item" onclick=this.classList.toggle("show-description")><p> The Mangekeyou Sharingan is one of the best superpowers that anybody has ever used and its undefeatable superpower.<span class="price">$100</span><br /><small>The Mangkeyou Sharingan is not so bad it really good superpower. </small></p></div>',
-	]
-
+	'<div class="item"onclick=this.classList.toggle("show-description")><p> This superpower is the chidori and I am used my the Uchiha Clan. <span class="price">$100</span><br /><small> I am used by only the strongest Uchiha in the Clan. </small></p>',
+	'<div class="item"onclick=this.classList.toggle("show-description")><p> <span class="price">$100</span><br /> I am the Rasengan and I am used by only the strongest who can master it. <small> The Rasengan is one the most powerful superpowers in the world.</small></p></div>',
+	'<div class="item"onclick=this.classList.toggle("show-description")><p> The Mangekeyou Sharingan is one of the best superpowers that anybody has ever used and its a undefeatable superpower.<span class="price">$100</span><br /><small>The Mangkeyou Sharingan is not so bad it really good superpower. </small></p></div>',
+	'<div class="item"onclick=this.classList.toggle("show-description")><p> I am Goku super saiyan 1 and I am powering up and this is my one of my superpowers.<span class="price">$100</span><br /><small> I can also shoot big beams which are very deadly and took me a few minutes to do it correctly.</small></p></div>',
+	'<div class="item"onclick=this.classList.toggle("show-description")><p> I am Goku and I am super saiyan god and this is one of the strongest forms i have my last one will be stronger Mastered Ultra Instincts.<span   class="price">$100</span><br /><small> I protect my friends and family and will not let them get hurt. </small></p></div>',
+]
+InstinctsDivs = [
+	'<div class="item"onclick=this.classList.toggle("show-description")><p> Instincts are very common by people we use it everyday.<span class="price">$100</span><br /><small> Instincts are used by any organism such as animals and humans.</small></p>',
+	'<div class="item"onclick=this.classList.toggle("show-description")><p> Always follow your instincts it could save time for anything.<span class="price">$100</span><br /> Instincts are really important when we are doing stuff such as sports. <small> Instincts are not only used in sports there also used in work.</small></p></div>',
+	'<div class="item"onclick=this.classList.toggle("show-description")><p> Intincts are used by the mined also known as the brain.<span class="price">$100</span><br /><small> Instincts are used by are brain to basically tells us what to do in our body and mind when thinking or doing something. </small></p></div>',
+]
 
   $('div').on('click', function() {
       $(this).toggleClass('show-description');
