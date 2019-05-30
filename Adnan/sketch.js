@@ -54,6 +54,7 @@ function draw() {
   text("Time: " +time.toFixed(0),50,60)
   fill(255, 15, 15)
   circle(x, y, 20)
+if (touches.length == 0)   {
  if (keyIsDown(LEFT_ARROW)) {
     x = x - my_speed
   }
@@ -66,6 +67,12 @@ function draw() {
   if (keyIsDown(DOWN_ARROW)) {
     y = y + my_speed
   }
+}
+else { 
+x = touches[0].x
+y = touches[0].y
+}
+
   fill(0,235,47)
   circle(a, b, 47)
   a = a + 5
